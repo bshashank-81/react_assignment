@@ -10,7 +10,7 @@ module.exports = () => {
     devtool: 'inline-source-map',
     target: 'web',
     devServer: {
-      port: 3042,
+      port: 3000,
       historyApiFallback: true,
       overlay: true,
       open: true,
@@ -24,7 +24,6 @@ module.exports = () => {
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
-      new BundleAnalyser(),
       new webpack.DefinePlugin({
         'process.env': JSON.stringify(process.env),
       }),
